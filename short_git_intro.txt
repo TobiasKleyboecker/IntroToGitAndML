@@ -1,0 +1,44 @@
+###################################
+### getting the course material ###
+###################################
+
+# set up git bash
+
+# create account on github
+
+# fork the remote repository
+This basically creates a copy of a remote repository (repository on github.com profile, in this case the one I created earlier) on your github profile
+1) use your browser to go to the repositories url url-to-repo.com
+2) in the top-right corner of the page, click fork
+3) the repository is available on your github profile now. you can play around with it without destroying anything in the original repo
+
+# open git bash and clone repo
+This basically downloads the repository to your local drive and creates a connection between local repository (a folder on your pc) and remote repository (repository on your github profile)
+1) change your working directory to the directory (folder) where you want to clone (i.e. copy/download) the repository -> cd /path/to/folder
+2) clone the directory to the working directory -> git clone url-to-repo.com
+3) in the directory that you cd'd to there should be a subfolder now with the name of the remote repository. cd to that subfolder -> cd repo-name/
+4) in git bash you will now see now '(master)' after the path that you are currently in. this indicates a) that you are currently in a git repository and b) that this is the master branch of that repository. we will not discuss branches right now but you can read about branches here: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+5) optional: check the status of your repository (e.g. are remote and local repositories in synch?) -> git status
+
+
+############################################
+### working with git for version control ###
+############################################
+
+
+# recording changes to the repository
+1) the first step after you launched git bash and navigated to the directory with your local repo is to check the status -> git status
+2) after you have made some changes on your local repo, e.g. you created a new file, you need to make sure that the file is tracked -> git add example-file.csv; or to track everything in the repo -> git add *
+3) now you can commit the changes -> git commit -m "type a comment to indicate, what your commit was about"
+4) finally you can push the local changes you commited to your remote repo -> git push origin master
+for more details go to: https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
+
+
+# use git to collaborate on projects
+this is beyond the scope of this session but here is a typical workflow
+- create a branch
+- work on that branch
+- send a merge request
+- project owner merges your branch to the master branch
+this is explained pretty nicely in more detail here: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+you can also tag the master e.g. to indicate software versions (e.g. tag 11.6 for pollux version 11.6). that way you can navigate to an earlier published version of the software and deploy the respective code (as was done for the shoppingcenter project)
