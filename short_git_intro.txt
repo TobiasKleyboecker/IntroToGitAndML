@@ -8,7 +8,7 @@
 
 # fork the remote repository
 This basically creates a copy of a remote repository (repository on github.com profile, in this case the one I created earlier) on your github profile
-1) use your browser to go to the repositories url url-to-repo.com
+1) use your browser to go to the repositories url https://github.com/agiedke/IntroToGitAndML
 2) in the top-right corner of the page, click fork
 3) the repository is available on your github profile now. you can play around with it without destroying anything in the original repo
 
